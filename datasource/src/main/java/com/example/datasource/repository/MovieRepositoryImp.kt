@@ -30,11 +30,9 @@ class MovieRepositoryImp(
     override suspend fun fetchVideos(movieId: Long): List<Video> = withContext(dispatcher) {
         val localMovie = fetchMovie(movieId = movieId)
         val localVideoList = localMovie.videos
-        Log.e("fetchVideosRepo", "localVideoList: $localVideoList")
         if (localVideoList?.isNotEmpty() == true) return@withContext localVideoList
         val remoteVideoList = movieService.fetchVideos(movieId = movieId).results
         localMovie.videos = remoteVideoList
-        Log.e("fetchVideosRepo", "remoteVideoList: $remoteVideoList")
         movieDao.updateVideoList(id = movieId, videos = Gson().toJson(remoteVideoList))
         remoteVideoList
     }

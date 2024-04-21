@@ -33,7 +33,7 @@ fun MovieItem(movie: Movie, onItemClick: (selectedMovieId: Long) -> Unit) {
         .clickable { onItemClick(movie.id) }
 
     ) {
-        val (image, title, date, ratting, adault) = createRefs()
+        val (image, title, date, ratting, adult) = createRefs()
         NetworkImage(url = movie.posterImage,
             modifier = Modifier
                 .clip(RoundedCornerShape(8))
@@ -73,7 +73,7 @@ fun MovieItem(movie: Movie, onItemClick: (selectedMovieId: Long) -> Unit) {
         })
         if (movie.adult) Image(painter = painterResource(R.drawable.ic_adault),
             contentDescription = null,
-            modifier = Modifier.constrainAs(adault) {
+            modifier = Modifier.constrainAs(adult) {
                 top.linkTo(parent.top, 4.dp)
                 end.linkTo(parent.end, 4.dp)
             })
