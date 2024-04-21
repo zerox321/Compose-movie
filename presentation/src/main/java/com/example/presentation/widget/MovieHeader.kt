@@ -35,8 +35,8 @@ fun MovieHeader(movie: Movie?) {
                     top.linkTo(parent.top, 16.dp)
                     start.linkTo(parent.start, 16.dp)
                 }
-                .width(98.dp)
-                .height(140.dp))
+                .width(112.dp)
+                .height(160.dp))
         TextWithMinLines(text = movie?.title ?: "", style = TextStyle(
             fontWeight = FontWeight.Bold,
             textAlign = TextAlign.Start,
