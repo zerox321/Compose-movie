@@ -1,6 +1,7 @@
 package com.example.banquemisrchallenge05.di
 
 import android.content.Context
+import com.example.banquemisrchallenge05.ui.ToastController
 import com.example.banquemisrchallenge05.ui.YoutubeLauncher
 import dagger.Module
 import dagger.Provides
@@ -18,6 +19,11 @@ object ApplicationModule {
     @Singleton
     fun provideYoutubeLauncher(@ApplicationContext context: Context): YoutubeLauncher {
         return YoutubeLauncher(context = context)
+    }
+    @Provides
+    @Singleton
+    fun provideToastController(@ApplicationContext context: Context): ToastController {
+        return ToastController(context = context)
     }
 
 }

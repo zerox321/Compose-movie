@@ -14,6 +14,7 @@ import androidx.hilt.navigation.compose.hiltViewModel
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
+import com.example.banquemisrchallenge05.ui.ToastController
 import com.example.banquemisrchallenge05.ui.YoutubeLauncher
 import com.example.banquemisrchallenge05.ui.navigation.NavScreen
 import com.example.banquemisrchallenge05.ui.theme.BanquemisrChallenge05Theme
@@ -32,6 +33,8 @@ class MainActivity : ComponentActivity() {
 
     @Inject
     lateinit var youtubeLauncher: YoutubeLauncher
+    @Inject
+    lateinit var toastController: ToastController
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContent {
@@ -92,6 +95,7 @@ class MainActivity : ComponentActivity() {
                                     }
                                 }
                             }
+                            detailViewModel.state.error?.let { error -> toastController.showMessage(message = error) }
                             DetailScreen(state = detailViewModel.state,
                                 event = { event -> detailViewModel.sendEvent(event = event) })
                         }

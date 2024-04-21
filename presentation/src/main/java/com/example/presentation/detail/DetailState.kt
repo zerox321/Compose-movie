@@ -12,4 +12,5 @@ data class DetailState(
     val keywords: List<Keyword> = emptyList(),
     val videos: List<Video> = emptyList(),
     val reviews: List<Review> = emptyList(),
+    val error: String? = null
 )

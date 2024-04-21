@@ -13,6 +13,7 @@ import com.example.datasource.usecase.GetReviewList
 import com.example.datasource.usecase.GetVideoList
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.channels.Channel
+import kotlinx.coroutines.flow.catch
 import kotlinx.coroutines.flow.launchIn
 import kotlinx.coroutines.flow.onEach
 import kotlinx.coroutines.flow.receiveAsFlow
@@ -60,19 +61,19 @@ class DetailViewModel @Inject constructor(
     fun fetchReviewList(movieId: Long) {
         getReviewList(movieId = movieId).onEach { reviews ->
             state = state.copy(reviews = reviews)
-        }.launchIn(viewModelScope)
+        }.catch { t -> state = state.copy(error = t.message) }.launchIn(viewModelScope)
     }
 
     fun fetchKeywordList(movieId: Long) {
         getKeywordList(movieId = movieId).onEach { keywords ->
             state = state.copy(keywords = keywords)
-        }.launchIn(viewModelScope)
+        }.catch { t -> state = state.copy(error = t.message) }.launchIn(viewModelScope)
     }
 
     fun fetchVideoList(movieId: Long) {
         getVideoList(movieId = movieId).onEach { videos ->
             state = state.copy(videos = videos)
-        }.launchIn(viewModelScope)
+        }.catch { t -> state = state.copy(error = t.message) }.launchIn(viewModelScope)
     }
 
 }
