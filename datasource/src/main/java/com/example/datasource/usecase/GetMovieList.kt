@@ -3,7 +3,7 @@ package com.example.datasource.usecase
 import androidx.paging.Pager
 import androidx.paging.PagingConfig
 import androidx.paging.PagingData
-import com.example.core.entity.Movie
+import com.example.core.model.entity.Movie
 import com.example.core.repository.MovieRepository
 import com.example.datasource.paging.MoviePagingSource
 import kotlinx.coroutines.flow.Flow

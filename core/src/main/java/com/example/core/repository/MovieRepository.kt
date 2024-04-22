@@ -1,9 +1,9 @@
 package com.example.core.repository
 
-import com.example.core.entity.Keyword
-import com.example.core.entity.Movie
-import com.example.core.entity.Review
-import com.example.core.entity.Video
+import com.example.core.model.entity.Keyword
+import com.example.core.model.entity.Movie
+import com.example.core.model.entity.Review
+import com.example.core.model.entity.Video
 
 interface MovieRepository {
     suspend fun fetchKeywords(movieId: Long): List<Keyword>

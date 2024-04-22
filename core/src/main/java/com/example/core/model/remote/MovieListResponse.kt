@@ -1,6 +1,6 @@
-package com.example.core.entity.remote
+package com.example.core.model.remote
 
-import com.example.core.entity.Movie
+import com.example.core.model.entity.Movie
 import com.google.gson.annotations.SerializedName
 
 data class MovieListResponse(

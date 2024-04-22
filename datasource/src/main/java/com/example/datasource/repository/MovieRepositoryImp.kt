@@ -1,10 +1,10 @@
 package com.example.datasource.repository
 
 import android.util.Log
-import com.example.core.entity.Keyword
-import com.example.core.entity.Movie
-import com.example.core.entity.Review
-import com.example.core.entity.Video
+import com.example.core.model.entity.Keyword
+import com.example.core.model.entity.Movie
+import com.example.core.model.entity.Review
+import com.example.core.model.entity.Video
 import com.example.core.repository.MovieRepository
 import com.example.network.service.MovieService
 import com.example.persistence.dao.MovieDao

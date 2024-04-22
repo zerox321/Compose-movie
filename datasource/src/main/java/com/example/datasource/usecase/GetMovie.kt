@@ -1,6 +1,6 @@
 package com.example.datasource.usecase
 
-import com.example.core.entity.Movie
+import com.example.core.model.entity.Movie
 import com.example.core.repository.MovieRepository
 import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.flow

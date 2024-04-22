@@ -1,4 +1,4 @@
-package com.example.core.entity
+package com.example.core.model.entity
 
 import androidx.compose.runtime.Immutable
 import androidx.room.Entity

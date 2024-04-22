@@ -2,7 +2,7 @@ package com.example.datasource.paging
 
 import androidx.paging.PagingSource
 import androidx.paging.PagingState
-import com.example.core.entity.Movie
+import com.example.core.model.entity.Movie
 import com.example.core.repository.MovieRepository
 
 class MoviePagingSource(

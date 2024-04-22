@@ -1,6 +1,6 @@
 package com.example.persistence.converters
 
-import com.example.core.entity.Keyword
+import com.example.core.model.entity.Keyword
 
 object KeywordListMapper {
     fun mapToStringList(keywords: List<Keyword>): List<String> {

@@ -1,7 +1,7 @@
 package com.example.persistence.converters
 
 import androidx.room.TypeConverter
-import com.example.core.entity.Review
+import com.example.core.model.entity.Review
 import com.google.gson.Gson
 import com.google.gson.reflect.TypeToken
 

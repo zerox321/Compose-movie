@@ -21,7 +21,7 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.constraintlayout.compose.ConstraintLayout
 import androidx.constraintlayout.compose.Dimension
-import com.example.core.entity.Movie
+import com.example.core.model.entity.Movie
 import com.example.presentation.R
 
 @Composable

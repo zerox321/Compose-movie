@@ -1,6 +1,6 @@
-package com.example.core.entity.remote
+package com.example.core.model.remote
 
-import com.example.core.entity.Review
+import com.example.core.model.entity.Review
 import com.google.gson.annotations.SerializedName
 
 class ReviewListResponse(

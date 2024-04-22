@@ -1,10 +1,10 @@
 package com.example.network.service
 
-import com.example.core.entity.Movie
-import com.example.core.entity.remote.KeywordListResponse
-import com.example.core.entity.remote.MovieListResponse
-import com.example.core.entity.remote.ReviewListResponse
-import com.example.core.entity.remote.VideoListResponse
+import com.example.core.model.entity.Movie
+import com.example.core.model.remote.KeywordListResponse
+import com.example.core.model.remote.MovieListResponse
+import com.example.core.model.remote.ReviewListResponse
+import com.example.core.model.remote.VideoListResponse
 import retrofit2.http.GET
 import retrofit2.http.Path
 import retrofit2.http.Query
